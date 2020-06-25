@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body{
+            background: url(2.jpeg)
+        }
+       
+        .e
+        {
+            margin-top:9%;
+        }
+
+        button:hover{
+        background-color:transparent;
+        box-shadow: 5px 5px darkgray;
+        color: white;
+        }
+       button{
+       width: 80px;
+         background-color:ghostwhite;
+         border-radius: 8px;
+       }
+      
+       #t{
+           color:ghostwhite;
+           margin-bottom:15px;
+           margin-left:80px;
+           font-size: 2em; 
+           font-family:Georgia, 'Times New Roman', Times, serif;
+       }
+       th{
+          background: url(2.jpeg);
+       }
+       #result{
+           border-radius:8px;
+       }
+  
+    </style>
+    <script>
+
+        function eq()
+        {
+            var x=document.getElementById("result").value;
+            var y=eval(x);
+            document.getElementById("result").value=y;
+
+        }
+        function del()
+        {
+            var v=document.getElementById("result").value;
+            document.getElementById("result").value=v.substr(0,v.length-1);
+
+        }
+        function clr()
+        {
+            document.getElementById("result").value="";
+        }
+        function dis(value)
+        {
+            document.getElementById("result").value+=value;
+        }
+        function square()
+        {
+            var sr=document.getElementById("result").value;
+            document.getElementById("result").value=sr*sr;
+        }
+        function squarerot()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.pow(rr,0.5);
+        }
+        function cos1()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.cos(rr);
+        }
+        function log()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.log(rr);
+        }
+        function tan()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.tan(rr);
+        }
+        function sin1()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.sin(rr);
+        }
+        function pi()
+        {
+            
+            document.getElementById("result").value= document.getElementById("result").value*Math.PI;
+        }
+        function rnd()
+        {
+            var rr=document.getElementById("result").value;
+            document.getElementById("result").value=Math.round(rr);
+        }
+       
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+       <div class="row" >
+            <div class="col-sm-4"></div>
+           <div class="e" class="col-sm-4">
+               <h3 id="t"><b>Basic Calculator</b></h3>
+               
+    <div class="table" >
+        <table border="1px;" >
+                <tr>
+                        
+                        <th ><button type="button" id="del" onclick="cos1()">cos </button></th>
+                        <th ><button type="button" id="del" onclick="sin1()">sin </button></th>
+                        <th ><button type="button" id="del" onclick="tan()">tan</button></th>
+                        <th ><button type="button" id="del" onclick="log()">log</button></th>
+                </tr>
+                <tr>
+                        <th ><button type="button" id="del" onclick="square()">X<sup>2</sup> </button></th>
+                        <th ><button type="button" id="del" onclick="squarerot()">√</button></th>
+                        <th ><button type="button" id="del" onclick="pi()">Pi</button></th>
+                        <th ><button type="button" id="del" onclick="rnd()">Rnd</button></th>
+                </tr>
+        <tr>
+                <th colspan="3"><input type=" " id="result" size="30em" > </th>
+                <th ><button type="button" id="del"   onclick="clr()" >Clr</button></th>
+        </tr>
+        <tr>
+                <th ><button type="button" value="7"  id="t7" onclick="dis(value)">7</button></th>
+                <th ><button type="button" value="8"  id="t8" onclick="dis(value)">8</button></th>
+                <th ><button type="button" value="9"  id="t9" onclick="dis(value)">9</button></th>
+                <th ><button type="button" id="del"   onclick="del()" >del</button></th>
+                
+        </tr>
+        <tr>
+                <th ><button type="button" value="4" id="t4" onclick="dis(value)">4</button></th>
+                <th ><button type="button" value="5" id="t5" onclick="dis(value)">5</button></th>
+                <th ><button type="button" value="6" id="t6" onclick="dis(value)">6</button></th>
+                <th ><button type="button" id="d"  onclick="dis('/')">/</button></th>
+        </tr>
+        <tr>
+                <th ><button type="button" value="1" id="t1" onclick="dis(value)">1</button></th>
+                <th ><button type="button" value="2" id="t2" onclick="dis(value)">2</button></th>
+                <th ><button type="button" value="3" id="t3" onclick="dis(value)">3</button></th>
+                <th ><button type="button" id="m" id="t1" onclick="dis('*')">*</button></th>
+        </tr>
+        <tr>
+                
+                <th ><button type="button" id="a" onclick="dis('+')">+</button></th>
+                <th ><button type="button" value="0" id="t0" onclick="dis(value)">0</button></th>
+                <th ><button type="button" id="s" onclick="dis('-')">-</button></th>
+                
+                <th ><button type="button" id="e" onclick="eq()">=</button></th>
+                
+        </tr>
+    </b>
+    </table>
+    </div>
+<div class="col-sm-4"></div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="moment1.js"></script>
+<style>
+    li:hover{
+        color:black;
+        background-color: white;
+    }
+    body{
+        background:url(world.resized.png);
+    }
+    ul{
+        background-color: ghostwhite;
+        padding: 1%;
+    }
+li{
+    
+    display: inline;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    padding-top:.5%;
+    padding-bottom: .5%;
+    text-align: center;
+    background-color:black;
+    color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <center>
+                <ul>
+                    <b>
+                    <li id="india" onmouseover="ibg()" onmouseout="abg()">India</li>
+                    <li id="america" onmouseover="ambg()" onmouseout="abg()">America</li>
+                    <li id="tokyo" onmouseover="tbg()" onmouseout="abg()">Tokyo</li>
+                    <li id="berlin" onmouseover="bbg()" onmouseout="abg()">Berlin</li>
+                    <li id="sydney" onmouseover="sbg()" onmouseout="abg()">Sydney</li>
+                    <li id="london" onmouseover="lbg()" onmouseout="abg()">London</li>
+                    </b>
+                </ul>
+            </center>
+            </div>
+            <div class="col-sm-3"> 
+                    <p id="time"></p>
+                  
+                    
+            </div> 
+        </div>
+    </div>
+   
+ 
+<script type="text/javascript">
+function abg()
+{
+    document.body.style.backgroundImage="url(world.resized.png)";
+    document.getElementById("time").innerHTML="";
+
+
+}
+function ibg()
+{
+    document.body.style.backgroundImage="url(india.resized.jpg)";
+    document.body.style.backgroundRepeat="no-repeat";
+
+    function fun1()
+    {var india=moment().format("MMMM Do YYYY, h:mm:ss a");
+    
+var y=document.getElementById("time");
+y.innerHTML=india;
+    }
+    
+fun1();
+
+}
+function ambg()
+{
+    document.body.style.backgroundImage="url(america.resized.png)";
+    document.body.style.backgroundRepeat="no-repeat";
+
+    function fun2(){
+        var atzone=moment().tz("America/Los_Angeles").format("MMMM Do YYYY, h:mm:ss a");
+        
+    var x=document.getElementById("time");
+    x.innerHTML=atzone;
+    }
+    
+fun2();
+
+}
+function tbg()
+{
+    document.body.style.backgroundImage="url(japan1.resized.jpg)";
+    document.body.style.backgroundRepeat="no-repeat";
+
+    function fun3(){
+        var ttzone=moment().tz("Asia/Tokyo").format("MMMM Do YYYY, h:mm:ss a");
+        
+    var tid=document.getElementById("time");
+    tid.innerHTML=ttzone;
+    }
+  
+fun3();
+
+
+}
+function bbg()
+{
+    document.body.style.backgroundImage="url(berline1.jpg)";
+    document.body.style.backgroundRepeat="no-repeat";
+    
+    function fun4(){
+        var btzone=moment().tz("Europe/Berlin").format("MMMM Do YYYY, h:mm:ss a");
+        
+    var bid=document.getElementById("time");
+     bid.innerHTML=btzone;
+    }
+    
+fun4();
+
+}
+function sbg()
+{
+    document.body.style.backgroundImage="url(sydney1.resized.jpg)";
+    document.body.style.backgroundRepeat="no-repeat";
+    function fun5(){
+        var stzone=moment().tz("Australia/Sydney").format("MMMM Do YYYY, h:mm:ss a");
+        
+    var sid=document.getElementById("time");
+    sid.innerHTML=stzone;
+
+    }
+fun5();
+
+}
+function lbg()
+{
+    document.body.style.backgroundImage="url(london2.resized.jpg)";
+    document.body.style.backgroundRepeat="no-repeat";
+    function fun6(){
+        var ltzone=moment().tz("Europe/London").format("MMMM Do YYYY, h:mm:ss a");
+        
+    var lid=document.getElementById("time");
+    lid.innerHTML=ltzone;
+    }
+  fun6();
+
+}
+</script>
+</body>
+</html>
+
